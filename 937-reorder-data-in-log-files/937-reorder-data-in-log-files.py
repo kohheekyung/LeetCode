@@ -4,6 +4,8 @@ class Solution:
         
         letter_logs = []
         digit_logs = []
+        
+        # split letter logs and digit logs
         for log in logs:
             
             split_log = log.split()
@@ -13,6 +15,8 @@ class Solution:
             else:
                 letter_logs.append(log)
         
+        # sort letter logs by content.
+        # if contents is same, sort by identifier
         letter_logs.sort(key=lambda x: (x.split()[1:], x.split()[0]))
         
         return letter_logs + digit_logs
