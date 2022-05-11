@@ -1,5 +1,8 @@
 class Solution:
     
+    def sortfunc(x):
+        return x.split()[1:] , x.split()[0]
+    
     def reorderLogFiles(self, logs: List[str]) -> List[str]:
         
         letter_logs = []
