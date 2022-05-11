@@ -8,9 +8,6 @@ class Solution:
             
             split_log = log.split()
             
-            # identifier = split_log[0]
-            # content = split_log[1:]
-            
             if log.split()[1].isdigit():
                 digit_logs.append(log)
             else:
