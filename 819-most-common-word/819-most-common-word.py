@@ -1,9 +1,7 @@
 class Solution:
     
     def mostCommonWord_(self, paragraph: str, banned: List[str]) -> str:
-        #52 ms
-        #14 mb
-        
+      
         # Preprocess string
         # ^ : not
         # \w: word character
@@ -14,12 +12,13 @@ class Solution:
         #paragraph = re.sub('[!?'',;.]','',paragraph ).lower()
         
         words = paragraph.split()
-  
+        words = [word for word in words if word not in banned]
+        
+        # count word with defalut dict 0
         counts = collections.defaultdict(int)       
         for word in words:
-            if word not in banned:
-                counts[word] += 1
-        
+            counts[word] += 1
+      
         return max(counts, key=counts.get)
     
     
@@ -29,6 +28,10 @@ class Solution:
         words = paragraph.split()
         words = [word for word in words if word not in banned]
         
-        
+        # use counter func
         counts = collections.Counter(words)
-        return counts.most_common(1)[0][0]
+        
+        # get firtst most common value list
+        most_common = counts.most_common(1)
+        
+        return most_common[0][0]
