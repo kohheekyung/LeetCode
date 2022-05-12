@@ -41,9 +41,24 @@ class Solution:
                 return i, nums_map[target-num]
     
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        
+        '''
+        Runtime: 83 ms
+        Memory: 15.2 MB
+        ''' 
         nums_map = {}
         for i, num in enumerate(nums):
                 if target - num in nums_map:
                     return nums_map[target - num], i
+                # 현재 딕셔너리에 없다면 키를 num 값을 index로 딕셔너리 저장
                 nums_map[num] = i
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
