@@ -28,26 +28,35 @@ class Solution:
         return volume
     
     def trap(self, height: List[int]) -> int:
-        
+        '''
+        Runtime: 200 ms O(n)
+        Memory: 15.7 MB
+        '''
         stack = []
         volume = 0
         
         for i in range(len(height)):
-            
+                   
+                
             # 변곡점을 만나는 경우 = 스택의 마지막 값과 비교
             while stack and height[i] > height[stack[-1]]:
+                #print('while')
                 # 스택에서 꺼낸다
                 top = stack.pop()
-            
+                #print('stack pop', top)
                 if not len(stack):
                     break
                 
                 # 이전과의 차이만큼 물 높이 처리
                 distance = i - stack[-1] - 1
+               
                 waters = min(height[i], height[stack[-1]]) - height[top]
+                print(i, distance, waters)
 
                 volume += distance * waters
-            stack.append(i)
-        return volume
                 
+            stack.append(i)        
+            #print('stack append', i)
+        return volume
+                   
         
