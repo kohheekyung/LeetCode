@@ -16,6 +16,8 @@ class Solution:
     
     def maxProfit(self, prices: List[int]) -> int:
         '''
+        Runtime : 1545 ms
+        Memory :25.1MB
         '''
         min_price = sys.maxsize
         profit = 0
