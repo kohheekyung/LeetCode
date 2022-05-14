@@ -16,7 +16,7 @@ class Solution:
         '''
         오름차순으로 정렬하여 두개씩 짝
         
-        Runtime 313 ms O(n)
+        Runtime 284 ms O(n)
         Memory 16.6 MB
         '''
         return sum(sorted(nums)[::2])
