@@ -39,4 +39,18 @@ class Solution:
             prev.next = list2
             
         return head.next
-                
+    
+    
+    def mergeTwoLists_recursive(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        '''
+        Time O(n) 47 ms
+        Memory O(n) 13.9 MB
+        '''
+        # list1이 None이거나 list1의 값이 더 크면 스왑
+        if (not list1) or (list2 and list1.val > list2.val):
+            list1, list2 = list2, list1
+        
+        if list1:
+            list1.next = self.mergeTwoLists_recursive(list1.next, list2)
+        
+        return list1
