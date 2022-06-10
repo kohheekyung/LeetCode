@@ -5,7 +5,10 @@
 #         self.next = next
 class Solution:
     def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
-        '''The idea is simple and intuitive: find linkedlist [m, n], reverse it, then connect m with n+1, connect n with m-1'''
+        '''
+        Time O(n)
+        Space O(1)
+        '''
         
         if not head or left == right:
             return head
