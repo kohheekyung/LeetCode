@@ -6,8 +6,8 @@
 class Solution:
     def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
         '''
-        Time O(n)
-        Space O(1)
+        Time O(n) 38 ms
+        Space O(1)  14.1 MB
         '''
         
         if not head or left == right:
