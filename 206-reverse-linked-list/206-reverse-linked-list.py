@@ -6,8 +6,8 @@
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         '''
-        Time O(n)
-        Space O(1)
+        Time O(n) 66 ms
+        Space O(1) 15.4 MB
         '''
         node, prev = head, None
         
