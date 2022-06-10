@@ -42,7 +42,6 @@ class Solution:
             head = head.next
             prev = prev.next.next
             
-            
         return root.next
     
     def swapPairs_recursive(self, head: Optional[ListNode]) -> Optional[ListNode]:
