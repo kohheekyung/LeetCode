@@ -5,7 +5,10 @@
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        
+        '''
+        Time O(max(m,n)) 95 ms
+        Space O(max(m,n)) 13.9 MB
+        '''
         
         root = head = ListNode(0)
         
@@ -21,6 +24,7 @@ class Solution:
                 l2 = l2.next
             val += carry
             
+            # carry, ramain = dimod(val,10)
             carry = val // 10
             remain = val % 10
             
