@@ -13,28 +13,19 @@ class Solution:
 
         root = ListNode(0)
         root.next = head
-        pre = root
+        start = root
 
         # left 이전 노드까지 이동
         for i in range(left - 1):
-            pre = pre.next
+            start = start.next
+        end = start.next
         
-    
-        # left, right 사이값 revese
-        reverse = None
-        curr = pre.next
-        for _ in range(right - left + 1):
-
-            next = curr.next
-            curr.next = reverse
-            reverse = curr
-            curr = next
-        #[dummy .... pre]    [reverse,..., pre.next]   [curr .....]
+        # 반대로 변환
+        for _ in range(right - left ):
+            tmp = start.next
+            start.next = end.next
+            end.next = end.next.next
+            start.next.next = tmp
         
-        pre.next.next = curr
-        pre.next = reverse
-
-  
-    
         return root.next
             
