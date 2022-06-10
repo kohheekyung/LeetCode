@@ -6,6 +6,9 @@
 class Solution:
     def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         '''
+        Time O(n) 62 ms
+        Space O(1) 16.6 MB n의 크기에 관계없이 항상 변수개수가 일관성있다
+        
         홀짝 노드를 각각 구성한 다음 홀수 노드의 마지막에 짝수 노드를 이어주면 된다.
         '''
         if head is None:
