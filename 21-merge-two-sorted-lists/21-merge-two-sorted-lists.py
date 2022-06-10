@@ -5,7 +5,10 @@
 #         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-
+        '''
+        Time O(n)
+        Memory O(1)
+        '''
         if list1 and not list2:
             return list1
         elif list2 and not list1:
