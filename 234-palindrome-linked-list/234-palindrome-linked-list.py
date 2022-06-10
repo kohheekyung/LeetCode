@@ -32,8 +32,8 @@ class Solution:
        def isPalindrome(self, head: ListNode) -> bool:
             '''
             
-            Time : O(n) 910 ms
-            Memory : O(1)  47.4 MB
+            Time : O(n) 958 ms
+            Memory : O(1)  31.1 MB
             '''
             rev = None
             slow = fast = head
