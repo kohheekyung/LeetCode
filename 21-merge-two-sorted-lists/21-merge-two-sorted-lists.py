@@ -6,8 +6,8 @@
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         '''
-        Time O(n)
-        Memory O(1)
+        Time O(n) 47 ms
+        Memory O(1) 13.9 MB
         '''
         if list1 and not list2:
             return list1
