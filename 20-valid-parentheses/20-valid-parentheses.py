@@ -1,6 +1,10 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        
+        '''
+        Time O(n) 50 ms
+        Memory O(n) 13.9 MB
+        pop과 push(append)는 O(1)시간이 든다
+        '''
         stack = []
         
         characters_set = { ')' : '(',
