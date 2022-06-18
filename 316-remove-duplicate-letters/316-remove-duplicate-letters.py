@@ -1,5 +1,9 @@
 class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
+        '''
+        Time O(n) 46 ms
+        Space O(1)13.8 MB
+        '''
         # 카운터를 통해 문자별 갯수 파악한다
         # 0 보다 큰 문자는 뒤에 더 붙일 문자가 있다
         counter = collections.Counter(s)
@@ -13,7 +17,7 @@ class Solution:
             counter[letter] -= 1
             
             # 이미 스택에 문자가 있다면 패스
-            if letter in stack:
+            if letter in seen:
                 continue
             
             # 0 보다 큰 문자는 뒤에 더 붙일 문자가 있다
