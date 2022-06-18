@@ -1,6 +1,9 @@
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
-        
+        '''
+        Time O(n) 1240 ms
+        Memory O(n) 24.6 MB
+        '''
         stack = [] # 인덱스 저장
         result = [0] * len(temperatures) # 다음 날짜까지의 날 수 저장
         
