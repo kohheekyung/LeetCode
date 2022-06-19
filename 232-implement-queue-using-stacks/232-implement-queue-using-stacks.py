@@ -11,7 +11,10 @@ class MyQueue:
 
     def pop(self) -> int:
         # 큐의 처음의 값을 반환 및 제거
+        # peek을 통해 output 정리
         self.peek()
+        
+        # output의 마지막값 반환 및 제거
         return self.output.pop()
         
     def peek(self) -> int:
@@ -19,9 +22,10 @@ class MyQueue:
         
         # output이 비었으면 모두 재입력
         if not self.output:
+            # input에서 꺼내서 output에 담음
             while self.input:
                 self.output.append(self.input.pop())
-        
+        # output의 마지막값 반환
         return self.output[-1]
 
     def empty(self) -> bool:
