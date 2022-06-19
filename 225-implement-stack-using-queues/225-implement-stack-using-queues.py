@@ -5,7 +5,7 @@ class MyStack:
     def __init__(self):
         # 데크 사용
         self.q = collections.deque()
-
+        
     def push(self, x: int) -> None:
         # 스택의 맨위에 삽입  
         
@@ -17,18 +17,15 @@ class MyStack:
 
     def pop(self) -> int:
         # 스택의 맨위의 값 반환
-        # 
         return self.q.popleft()
         
 
     def top(self) -> int:
         # 스택의 맨위의 값 조회
-        # Time O(1)
         return self.q[0]
 
     def empty(self) -> bool:
         # 스택이 비었는지 확인
-        # Time O(1)
         return len(self.q) == 0
         
 
