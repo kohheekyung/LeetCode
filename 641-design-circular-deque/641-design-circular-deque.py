@@ -12,6 +12,8 @@ class MyCircularDeque:
     파이썬으로 collections.deque()으로 사용되며 내부적으론 연결리스트로 추상자료형의 형태로 구현되어 있음.
     
     Circular deque도 연결리스트로 구현 가능
+    연결리스트로 구현시
+    삽입, 삭제, 조회 전부 O(1)의 시간이 걸림
     '''
     def __init__(self, k: int):
         
