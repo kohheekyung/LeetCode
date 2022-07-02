@@ -11,8 +11,8 @@ class Solution:
         '''
         heap사용하여 개수가 가장 많은 요소를 우선순위에 저장
         
-        Time O(N + NlogK) 
-        Space O(N+k) N:num hash map k : heap element
+        Time O(N + NlogK) 205 ms
+        Space O(N+k) N:num hash map k : heap element 205 ms
         '''
         # 개수 딕셔너리 구하기
         num_freqs = collections.Counter(nums)
