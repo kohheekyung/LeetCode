@@ -21,11 +21,13 @@ class Solution:
         freqs_heapq = []
         for freq in num_freqs:
             # 개수가 많은 요소가 우선순위에 있도록 함
+            # minheap임으로 -를 붙여 큰값이 앞에 위치하도록
             heapq.heappush(freqs_heapq, (-num_freqs[freq], freq))
             
         # 우선순위 큐에서 작은순으로 추출하기
         topK = []
         for _ in range(k):
+            # element추출
             topK.append(heapq.heappop(freqs_heapq)[1])
         return topK
     
