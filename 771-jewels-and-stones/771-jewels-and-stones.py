@@ -20,3 +20,21 @@ class Solution:
             result += jewels_dict[jewel]
         
         return result
+    
+    def numJewelsInStones_counter(self, jewels: str, stones: str) -> int:
+        '''
+        Counter 사용해서 간단하게 풀기
+        '''
+        freqs = collections.Counter(stones) # 돌의 빈도수 구하기 
+        count = 0
+        
+        for jewel in jewels:
+            count += freqs[jewel]
+            
+        return Counter
+        
+    def numJewelsInStones_python(self, jewels: str, stones: str) -> int:
+        '''
+        Python 한줄로 풀기
+        '''
+        return sum(stone in jewels for stone in stones)
