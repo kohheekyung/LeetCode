@@ -6,6 +6,8 @@ class Solution:
         우측 포인터 idx
         중복되는 문자가 있을시 start를 갱신하거나
         중복되는 문자가 없을시 substring의 길이를 갱신해가는문제
+        Time O(n) 71 ms
+        Space O(n) 	14.2 MB
         '''
         chars_used = {} # 등장한 단어들
         max_length = 0 # substring의 최대길이 저장 
