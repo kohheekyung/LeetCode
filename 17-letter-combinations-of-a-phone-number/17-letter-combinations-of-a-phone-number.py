@@ -2,8 +2,8 @@ class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
         '''
         DFS으로 가능한 경우 모두 조합하는 형태로 탐색
-        Time O(4^n * N) : 문제에서 4는 digits의 최대길이
-        Spcae O(n) : digits의 길이에 따라
+        Time O(4^n * N) : 문제에서 4는 digits의 최대길이 69 ms
+        Spcae O(n) : digits의 길이에 따라 14 MB
         '''
         def dfs(index, path=""):
             '''
@@ -11,7 +11,7 @@ class Solution:
             path : 현재까지 모은 문자 조합
             '''
             
-            # 끝까지 탐색했다면 백트래킹
+            # 전달된 문자열의 길이와 digits의 길이가 같다며 결과에 담아주고 백트래킹
             if len(path) == len(digits):
                 result.append(path)
                 return # 백트래킹
@@ -20,7 +20,9 @@ class Solution:
             for i in range(index, len(digits)):
                 # 문제조합에 추가
                 for j in letters[digits[i]]:
-                    dfs(i+1, path+j)
+                    # i+1을 통해 문자조합이 중복이 없도록함
+                    # path+j를 통해 조합된 문자열이 전달됨
+                    dfs(i+1, path+j) 
         
         
         # 예외처리
