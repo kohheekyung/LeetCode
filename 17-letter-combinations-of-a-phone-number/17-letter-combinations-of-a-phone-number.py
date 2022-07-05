@@ -1,3 +1,4 @@
+class Solution:    
     def letterCombinations_recursive(self, digits: str) -> List[str]:
         '''
         DFS으로 가능한 경우 모두 조합하는 형태로 탐색
