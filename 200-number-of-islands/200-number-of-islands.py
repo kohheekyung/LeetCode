@@ -1,8 +1,10 @@
 class Solution:
     
     def numIslands(self, grid: List[List[str]]) -> int:
-        
-        
+        '''
+        Time O(MxN)
+        Space O(1)
+        '''
         def dfs(m,n):
            
             # 예외처리
@@ -22,9 +24,6 @@ class Solution:
             # 섬아니면 반환
             else: 
                 return
-              
-         
-    
         num = 0
         
         for i in range(len(grid)):
