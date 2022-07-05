@@ -1,10 +1,10 @@
 class Solution:
     
-    def numIslands(self, grid: List[List[str]]) -> int:
+    def numIslands_dfs(self, grid: List[List[str]]) -> int:
         '''
-        Time O(MxN)
-        Space O(1)
-        '''
+        Time O(MxN) : 541 ms
+        Space O(1) : 16.6 ms
+        ''' 
         def dfs(m,n):
            
             # 예외처리
@@ -34,3 +34,49 @@ class Solution:
                     num +=1
                     dfs(i,j)
         return num
+    
+    def numIslands(self, grid: List[List[str]]) -> int:
+        '''
+        stack이용하여 dfs 대신 풀기
+        '''
+        num = 0
+        
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                # 섬이면 
+                if grid[i][j] == '1':
+                    #스택에 현위치 저장
+                    stack = [(i,j)]
+                    # 섬 개수 추가 후 dfs와 동일하게 로 상하좌우 방문하여 섬 방문 표시
+                    num +=1
+                    while stack:
+                        m,n = stack.pop()
+                        #방문표시
+                        grid[m][n]='0'
+                        
+                        # 상하좌우시 스택에 저장
+                        if  n+1<len(grid[0]) and grid[m][n+1] == '1':
+                            stack.append((m,n+1))
+                        if  m+1 < len(grid) and grid[m+1][n] == '1':
+                            stack.append((m+1,n))
+                        if  m-1 >= 0 and grid[m-1][n] == '1':
+                            stack.append((m-1,n))
+                        if  n-1 >= 0 and grid[m][n-1] == '1':
+                            stack.append((m,n-1))
+        return num
+                    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
