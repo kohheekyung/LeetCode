@@ -38,6 +38,8 @@ class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         '''
         stack이용하여 dfs 대신 풀기
+        Time O(MxN) : 479 ms
+        Space O(1) : 16.4 MB
         '''
         num = 0
         
