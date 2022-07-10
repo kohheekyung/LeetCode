@@ -14,9 +14,9 @@ class Solution:
             for i in range(start, len(candidates)):              
                 curr_candidate = candidates[i]
                 curr_comb.append(curr_candidate)
-                print(remain - curr_candidate, curr_comb,i, '호출')
+                #print(remain - curr_candidate, curr_comb,i, '호출')
                 dfs(remain - curr_candidate, curr_comb,i)
-                print(remain - curr_candidate, curr_comb,i, '반환')
+                #print(remain - curr_candidate, curr_comb,i, '반환')
                 curr_comb.pop()
     
         result = []
