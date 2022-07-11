@@ -2,8 +2,7 @@ class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
 
         def dfs(curr_subset, start):
- 
-            
+         
             if curr_subset not in result:
                 result.append(curr_subset)
                 start = 0
