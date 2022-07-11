@@ -23,9 +23,7 @@ class Solution:
         result = []
         
         dfs(nums, 0)
-        
-        
-        
+
         return result
 
 
