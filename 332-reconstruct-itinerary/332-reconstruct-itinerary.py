@@ -18,10 +18,6 @@ class Solution:
                     next_tickets = curr_tickets[:]
                     next_tickets.remove(ticket)
                     
-                    
-                    #result.append(ticket[0])
-                    
-                    
                     next_exist = dfs(next_from, next_tickets)
                     if next_exist:
                         result.append(ticket[0])
@@ -32,8 +28,8 @@ class Solution:
             
         
      
-        tickets = sorted(tickets, key = lambda x:(x[0], x[1]) )
-        print(tickets)
+        tickets = sorted(tickets, key = lambda x:(x[0], x[1]))
+    
         
         result = []
         
