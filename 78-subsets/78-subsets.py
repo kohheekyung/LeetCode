@@ -4,6 +4,7 @@ class Solution:
         def dfs(curr_subset, start):
             '''
             dfs 인자를 index와 현 subsets으로 잡으나 subsets이 줄어드는 방향
+            Time 669 ms
             '''    
             if curr_subset not in result:
                 result.append(curr_subset)
@@ -30,6 +31,7 @@ class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         '''
         dfs 인자를 index와 현 subsets으로 잡으나 subsets이 늘어나는 방향
+        Time 56 ms
         '''    
         def dfs(index, path):
             result.append(path)
