@@ -1,6 +1,10 @@
 class Solution:
     def findItinerary(self, tickets: List[List[str]]) -> List[str]:
-        
+        '''
+        [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+        sort 후
+        [['ATL','JFK'],['ATL', 'SFO'], ['JFK', 'ATL'], ['JFK', 'SFO'], ['SFO', 'ATL']]
+        '''
         
         def dfs(curr_from, curr_tickets):
         
@@ -38,7 +42,6 @@ class Solution:
         
         # smaller lexical order를 위해 sort하고 시작
         tickets = sorted(tickets, key = lambda x:(x[0], x[1]))
-    
         
         result = []
         
@@ -46,3 +49,5 @@ class Solution:
         dfs("JFK",tickets)
         
         return result[::-1]
+    
+    
