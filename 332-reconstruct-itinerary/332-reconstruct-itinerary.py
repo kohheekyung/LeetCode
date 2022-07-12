@@ -5,7 +5,6 @@ class Solution:
         sort 후
         [['ATL','JFK'],['ATL', 'SFO'], ['JFK', 'ATL'], ['JFK', 'SFO'], ['SFO', 'ATL']]
         '''
-        
         def dfs(curr_from, curr_tickets):
         
             if len(curr_tickets) == 1:
