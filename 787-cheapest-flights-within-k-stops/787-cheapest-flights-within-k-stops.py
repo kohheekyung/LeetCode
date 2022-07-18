@@ -26,7 +26,6 @@ class Solution:
             if stop >= 0:
                 for v, w in graph[node]:
                     heapq.heappush(Q,( price+w, v, stop-1))
-            
-                    
+           
         return -1
     
