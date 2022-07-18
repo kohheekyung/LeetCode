@@ -20,31 +20,23 @@ class Solution:
             
             if vis[node] > stop:
                 continue
-            vis[node] =stop
+            vis[node] = stop
             
-            if k >= 0:
+    
+            if stop >= 0:
                 for v, w in graph[node]:
                     heapq.heappush(Q,( price+w, v, stop-1))
             
                     
         return -1
     
-# class Solution:
-#     def findCheapestPrice(self, n, flights, src, dst, K):
-        
-#         graph = collections.defaultdict(dict)
-#         for s, d, w in flights:
-#             graph[s][d] = w
-        
-#         pq = [(0, src, K+1)]
-#         vis = [0] * n
-#         while pq:
-#             w, x, k = heapq.heappop(pq)
-#             if x == dst:
-#                 return w
-#             if vis[x] >= k:
-#                 continue
-#             vis[x] = k
-#             for y, dw in graph[x].items():
-#                 heapq.heappush(pq, (w+dw, y, k-1))
-#         return -1
+
+#     graph 0 : (1,100)
+#           1 : (2, 100) , (3,600)
+#           2 : (0, 100) , (3,200)
+            
+#     Q = (0,0,1)
+#     vis = [0,0,0,0]
+    
+#     Q = []
+#     vis = [1]
