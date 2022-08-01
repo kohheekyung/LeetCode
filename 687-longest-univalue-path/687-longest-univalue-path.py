@@ -35,8 +35,6 @@ class Solution:
             # 현재까지의 거리 리턴
             return max(left, right)
             
-            
-            
         dfs(root)
         
         return self.result
