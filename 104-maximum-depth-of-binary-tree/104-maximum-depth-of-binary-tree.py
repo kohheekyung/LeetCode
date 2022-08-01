@@ -10,6 +10,7 @@ class Solution:
 
         if root is None:
             return 0
+        
         # 현재 큥에는 현재 깊이(depth)에 해당하는 모든 노드가 들어가게 됨
         queue = collections.deque([root])
         depth = 0
